@@ -6,7 +6,7 @@ permalink: /research
 <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
 
   <!-- First Box -->
-  <div style="width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
+  <div style="max-width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
     <img src="/assets/img/proj1.jpg" alt="Project 1" style="width: 100%; height: auto">
     <p>
     In graduate school,
@@ -25,7 +25,7 @@ permalink: /research
   </div>
 
   <!-- Second Box -->
-  <div style="width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
+  <div style="max-width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
     <img src="/assets/img/proj2.jpg" alt="Project 2" style="width: 100%; height: auto">
     <p>
     As my second Ph.D. project,
@@ -38,7 +38,7 @@ permalink: /research
   </div>
 
   <!-- Third Box -->
-  <div style="width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
+  <div style="max-width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
     <img src="/assets/img/proj3.jpg" alt="Project 3" style="width: 100%; height: auto">
     <p>
     At my postdoc position,
