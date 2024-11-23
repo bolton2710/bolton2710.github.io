@@ -1,3 +1,4 @@
+@use 'variables' as *;
 /*
   Site container
 */
@@ -31,4 +32,67 @@
     display: block;
     width: 95vw;
   }
+}
+
+/* For quotes in mentorship page */
+.quote-block {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the image and quote */
+}
+
+.portrait {
+  width: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 3px solid black;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.quote-content {
+  flex: 1; /* Allow the quote to fill the remaining space */
+}
+
+blockquote {
+  border: none;
+  text-align: justify;
+  margin: 0;
+  font-style: italic;
+  color: black;
+}
+
+/* Portrait on the left (default) */
+.quote-block.left {
+  flex-direction: row; /* Left side by default */
+}
+
+/* Portrait on the right */
+.quote-block.right {
+  flex-direction: row-reverse; /* Reverses the order to put the portrait on the right */
+}
+
+/* Center the image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For absolute positioning of the line */
+}
+
+.centered-image {
+  display: block;
+  max-width: 100%; /* Make the image responsive */
+  max-height: 80%; /* Adjust based on your preference */
+  z-index: 1;
+}
+
+/* Line through the image */
+.line {
+  content: '';
+  position: absolute;
+  top: 50%; /* Position the line through the middle of the image */
+  left: 0;
+  width: 100%;
+  height: 5px; /* Make the line thicker */
+  transform: translateY(-50%); /* Align the line to the middle vertically */
+  z-index: 0; /* Ensure the line is behind the image */
 }

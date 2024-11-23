@@ -10,7 +10,7 @@ permalink: /research
     <img src="/assets/img/proj1.jpg" alt="Project 1" style="width: 100%; height: auto">
     <p>
     In graduate school,
-    I developed a multi-scale DFT/MD model
+    I developed a multi-scale molecular model
     to understand
     how mixed solvents
     affect the rate of alcohol dehydration reactions,
@@ -42,9 +42,10 @@ permalink: /research
     <img src="/assets/img/proj3.jpg" alt="Project 3" style="width: 100%; height: auto">
     <p>
     At my postdoc position,
-    I learned to use grand-canonical DFT
+    I used grand-canonical atomistic models
+    and machine learning
     to study molecular and ion adsorption
-    on electrocatalysts (with some application of machine learning).
+    on electrocatalysts.
     <br>
     <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.4c01032" target="_blank">
     J. Phys. Chem. Lett. 2024, 15, 6538−6543</a> 
