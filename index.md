@@ -33,7 +33,7 @@ a little since <b>I am currently on the faculty job market (2024).</b> 😝
 I will also post random tutorials
 and snippets of my computational research
 with pedagogical intent.
-I hope create
+I want to create
 a site
 that spell out mathematical and computational methods
 geared for chemistry, physics, and engineering students.

@@ -73,3 +73,13 @@ were kind enough to provide "reviews" upon my request
     <p>- Adil Kolah, undergraduate researcher at UMich</p>
   </div>
 </div>
+
+<div class="quote-block right">
+  <img src="/assets/img/mad.png" alt="Mad" class="portrait" style="width: 100px; margin-top:-10px;">
+  <div class="quote-content">
+    <blockquote style="border-right: 5px solid #FFCB05; padding-right: 15px;">
+    "I worked with Bolton at the University of Michigan during my sophomore year where he helped me learn about acid molecule simulation. Boltons assistance was very valuable and encouraging during my lab experience."
+    </blockquote>
+    <p style="margin-left: 45%;">- Mad Lindsey, undergraduate researcher at UMich</p>
+  </div>
+</div>
