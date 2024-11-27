@@ -9,7 +9,7 @@
     {% for item in site.data.settings.social %}
       <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
     {% endfor %}
-    <a href="/assets/cv.pdf" class="menu-link" target="_blank">
+    <a href="{{ site.github.url }}/assets/cv.pdf" class="menu-link" target="_blank">
       <i class="fa fa-file-pdf-o" aria-hidden="true"></i> CV
     </a>
   </nav>
@@ -22,7 +22,7 @@
       {% for item in site.data.settings.social %}
         <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
       {% endfor %}
-      <a href="/assets/cv.pdf" class="menu-link" target="_blank">
+      <a href="{{ site.github.url }}/assets/cv.pdf" class="menu-link" target="_blank">
         <i class="fa fa-file-pdf-o" aria-hidden="true"></i> CV
       </a>
     </div>
