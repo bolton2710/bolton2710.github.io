@@ -83,3 +83,33 @@ were kind enough to provide "reviews" upon my request
     <p style="margin-left: 45%;">- Mad Lindsey, undergraduate researcher at UMich</p>
   </div>
 </div>
+
+<div class="quote-block left">
+  <img src="/assets/img/tosin.png" alt="Tosin" class="portrait" style="width: 120px;">
+  <div class="quote-content">
+    <blockquote style="border-left: 5px solid #FFCB05; padding-left: 15px;">
+    "Bolton is an outstanding computational mentor with a remarkable ability to quickly grasp complex problems across different time and length scales. His deep expertise and knack for simplifying intricate issues into their core components make him an invaluable resource. Discussing challenges with him has been both insightful and enriching."
+    </blockquote>
+    <p>- Oluwatosin Ohiro, Ph.D. candidate at UMich</p>
+  </div>
+</div>
+
+<div class="quote-block right">
+  <img src="/assets/img/dean.png" alt="Dean" class="portrait" style="width: 100px; margin-top:80px;">
+  <div class="quote-content">
+    <blockquote style="border-right: 5px solid #FFCB05; padding-right: 15px;">
+    "Throughout my PhD, Bolton has been an extraordinary mentor, leader, and researcher. During my first year, he hosted weekly tutorials on atomistic modeling for first-year lab members, providing us with a strong foundation in density functional theory and electrochemistry. While excelling in publishing his own research, Bolton consistently made time to mentor others, meeting weekly with first-year students (myself included) to help launch our projects. His guidance remains invaluable as we now prepare our collective research for publication. By setting an exemplary standard, Bolton emphasizes the importance of curiosity, critical thinking, collaboration, and the ability to inspire and support others. His unwavering commitment to advancing science while fostering the growth of those around him makes him an inspiring role model and an exceptional asset to the research community. In any academic setting, Bolton’s leadership motivates his colleagues and mentees to strive for excellence and become the best version of themselves."
+    </blockquote>
+    <p style="margin-left: 54%;">- Dean Sweeney, Ph.D. candidate at UMich</p>
+  </div>
+</div>
+
+<div class="quote-block left">
+  <img src="/assets/img/yifei.png" alt="Yifei" class="portrait" style="width: 120px; margin-top:-5px;">
+  <div class="quote-content">
+    <blockquote style="border-left: 5px solid #FFCB05; padding-left: 15px;">
+    "I worked with Bolton at University of Michigan since 2023. He helped me with DFT simulations. He is chill and freindly. I do not feel the pressure of postdoc for undergraduate students when I am working with hime. He also good at leading others to think about the key of the problems."
+    </blockquote>
+    <p>- Yifei Liu, undergraduate reseacher at UMich</p>
+  </div>
+</div>
