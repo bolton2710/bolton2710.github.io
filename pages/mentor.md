@@ -105,11 +105,21 @@ were kind enough to provide "reviews" upon my request
 </div>
 
 <div class="quote-block left">
-  <img src="/assets/img/yifei.png" alt="Yifei" class="portrait" style="width: 120px; margin-top:-5px;">
+  <img src="/assets/img/yifei.png" alt="Yifei" class="portrait" style="width: 100px; margin-top:-5px;">
   <div class="quote-content">
     <blockquote style="border-left: 5px solid #FFCB05; padding-left: 15px;">
     "I worked with Bolton at University of Michigan since 2023. He helped me with DFT simulations. He is chill and freindly. I do not feel the pressure of postdoc for undergraduate students when I am working with hime. He also good at leading others to think about the key of the problems."
     </blockquote>
     <p>- Yifei Liu, undergraduate reseacher at UMich</p>
+  </div>
+</div>
+
+<div class="quote-block right">
+  <img src="/assets/img/roshini.png" alt="Roshini" class="portrait" style="width: 100px; margin-top:10px;">
+  <div class="quote-content">
+    <blockquote style="border-right: 5px solid #FFCB05; padding-right: 15px;">
+    "I started working with Bolton in 2023, as I was just getting started with my PhD at University of Michigan. His ability to simplify even the most challenging concepts helped in dealing with the complexities of density functional theory and troubleshooting atomistic simulations. His patience and clarity made an otherwise intimidating subject feel approachable—and even fun! While doing all the amazing work that he does, he also inspires me to be a more organized researcher—a skill I’ll carry forward throughout my career. I feel incredibly lucky to have had such a dedicated and thoughtful mentor."
+    </blockquote>
+    <p style="margin-left: 50%;">- Roshini Dantuluri, Ph.D. candidate at UMich</p>
   </div>
 </div>
