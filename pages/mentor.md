@@ -1,6 +1,6 @@
 ---
 layout: page
-title:
+title: Mentoring
 permalink: /mentor
 ---
 I was fortunate to be given

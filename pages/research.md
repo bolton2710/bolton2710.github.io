@@ -1,6 +1,6 @@
 ---
 layout: page
-title:
+title: Research
 permalink: /research
 ---
 <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
@@ -34,6 +34,9 @@ permalink: /research
     <br>
     <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.248001" target="_blank">
     Phys. Rev. Letter 2023, 131, 248001</a> 
+    <br>
+    <a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.4c05537" target="_blank">
+    J. Phys. Chem. C 2024, 128, 48, 20559–20568</a> 
     </p>
   </div>
 

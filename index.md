@@ -1,6 +1,6 @@
 ---
 layout: home
-title:
+title: Home
 ---
 <p style="float: right; margin: 5px 0 10px 10px;">
     <img src="/assets/img/self-cropped.png" width="280" alt="Me and Biscuit photo" style="border-radius: 0px;">
@@ -19,8 +19,7 @@ and
 <a href="https://www.che.psu.edu/department/directory-detail-g.aspx?q=STM9" target="_blank">Dr. Scott Milner</a>.
 <br>
 My research involves
-developing
-state-of-the-art molecular models
+developing molecular models
 to study and understand electrochemistry and catalysis
 with broad applications
 in sustainable energy storage and chemical synthesis.
