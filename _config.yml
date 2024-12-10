@@ -5,7 +5,9 @@ paginate:            5
 
 # Build settings
 markdown:            kramdown
-highlighter:         rouge
+kramdown:
+  input: GFM  # GitHub Flavored Markdown
+  syntax_highlighter: rouge
 permalink:           /:title
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 

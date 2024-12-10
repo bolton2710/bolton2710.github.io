@@ -44,8 +44,8 @@ permalink: /research
   <div style="max-width: 600px; border: 3px solid black; border-radius: 15px; padding: 20px;">
     <img src="/assets/img/proj3.jpg" alt="Project 3" style="width: 100%; height: auto">
     <p>
-    At my postdoc position,
-    I used grand-canonical atomistic models
+    At my postdoctoral position,
+    I am using grand-canonical atomistic models
     and machine learning
     to study molecular and ion adsorption
     on electrocatalysts.

@@ -9,7 +9,7 @@ google-ID: 'UA-112060364-2'
 menu:
 - {name: 'Research Snippets',  url: 'research'}
 - {name: 'Mentoring',  url: 'mentor'}
-- {name: 'Tutorials',  url: 'tutorial'}
+- {name: 'Tutorials',  url: 'tutorials'}
 social:
 - {icon: 'google', link: 'https://scholar.google.com/citations?user=3IqbycgAAAAJ&hl=en&oi=ao'}
 - {icon: 'twitter', link: 'https://x.com/BoltonTran27'}
