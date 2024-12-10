@@ -33,7 +33,7 @@ k_2 &= \frac{RT}{h}\exp{\left(-\frac{E^\dagger_2}{RT}\right)}
 \end{align}
 </div>
 The activation energies $$E^\dagger_1$$ and $$E^\dagger_2$$
-and the temperature $T$ control reaction rates.
+and the temperature $$T$$ control reaction rates.
 From a simple collision theory perspective,
 larger activation energies slow reaction down
 since the probability of particles' collision
@@ -49,11 +49,11 @@ between the transition state and the initial state.
 <span>$$T$$ (K):</span>
 <input type="range" id="Tslider" min="400" max="500" step="1" value="400">
 <span id="Tspan">400</span>
-&nbsp;
+
 <span>$$E^\dagger_1$$ (kJ/mol):</span>
 <input type="range" id="EA1slider" min="140" max="150" step="0.1" value="140">
 <span id="EA1span">140</span>
-&nbsp;
+
 <span>$$E^\dagger_2$$ (kJ/mol):</span>
 <input type="range" id="EA2slider" min="150" max="160" step="0.1" value="150">
 <span id="EA2span">150</span>
