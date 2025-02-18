@@ -39,18 +39,18 @@ jobs:
       #     ruby-version: '3.1' # Not needed with a .ruby-version file
       #     bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       #     cache-version: 0 # Increment this number if you need to re-download cached gems
-      - name: Install Ruby using ruby-build
-        run: |
-          git clone https://github.com/rbenv/ruby-build.git
-          cd ruby-build
-          sudo ./install.sh
-          ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
-      - name: Mark Ruby installation as complete
-        run: touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
-      - name: Install dependencies
-        run: |
-          gem install bundler --user-install
-          bundle install --path vendor/bundle
+      # - name: Install Ruby using ruby-build
+      #   run: |
+      #     git clone https://github.com/rbenv/ruby-build.git
+      #     cd ruby-build
+      #     sudo ./install.sh
+      #     ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+      # - name: Mark Ruby installation as complete
+      #   run: touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+      # - name: Install dependencies
+      #   run: |
+      #     gem install bundler --user-install
+      #     bundle install --path vendor/bundle
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
