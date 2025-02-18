@@ -13,5 +13,3 @@ Fourier transform in a common technique used in signal processing.
 
 In physics and chemistry, espsecially with molecular simulation,
 noisy fluctuation.
-
-Test
