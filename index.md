@@ -25,11 +25,7 @@ with broad applications
 in sustainable energy storage and chemical synthesis.
 
 <br><br>
-I created this site for mainly selfish reasons.
-The biggest one is to "market" myself
-a little since <b>I am currently on the faculty job market (2024).</b> 😝
-<br>
-I will also post random tutorials
+Here, I will post random tutorials
 and snippets of my computational research
 with pedagogical intent.
 I want to create
