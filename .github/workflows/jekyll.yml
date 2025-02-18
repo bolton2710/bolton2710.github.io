@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies
         run: |
           gem install bundler --user-install
-          echo "$HOME/.local/share/gem/ruby/3.2.0/bin" >> $GITHUB_PATH
+          echo "$HOME/.local/share/gem/ruby/3.2.0/bin" >> $PATH
           bundle install --path vendor/bundle
       - name: Setup Pages
         id: pages
