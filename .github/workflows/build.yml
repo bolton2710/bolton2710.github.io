@@ -5,12 +5,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1.4  # specify the Ruby version you want to use
+      - name: Install ruby-build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
 
-      - name: Install dependencies
+      - name: Install Ruby using ruby-build
+        run: |
+          git clone https://github.com/rbenv/ruby-build.git
+          cd ruby-build
+          sudo ./install.sh
+          ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+          
+      - name: Mark Ruby installation as complete
+        run: touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+
+      - name: Install bundler and dependencies
         run: |
           gem install bundler
           bundle install
