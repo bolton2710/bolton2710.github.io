@@ -157,11 +157,6 @@ for chemical engineering students.
           { x: t, y: ca, type: 'scatter', line:{color:'blue'}, name:'$C_A$', hoverinfo: 'x+y'},
           { x: t, y: cb, type: 'scatter', line:{color:'red'}, name:'$C_B$', hoverinfo: 'x+y'},
           { x: t, y: cc, type: 'scatter', line:{color:'green'}, name:'$C_C$', hoverinfo: 'x+y'}];
-        // const layout = {
-        //   xaxis: {title: 'Time (hr)', showgrid: false, tickmode: 'linear', ticks: 'outside', fixedrange: true, range: [0,50], tickangle:0, dtick: 5, tickfont:{size:16}, titlefont:{size:17}}, 
-        //   yaxis: {title: 'Concentration (mol/L)', showgrid: false, tickmode: 'linear', ticks: 'outside', fixedrange: false, range: [0,2.1], tickfont:{size:16}, titlefont:{size:17}},
-        //   legend: {x: 0.5, y: 1.05, xanchor: 'center', yanchor: 'bottom', orientation: 'h', font: {size:16}},
-        //   margin: {l: 50, r: 50, b: 50, t: 0}};
         const layout = {
           xaxis: {title: 'Time (hr)', showgrid: false, tickmode: 'linear', ticks: 'outside', fixedrange: true, range: [0,50], tickangle:0, dtick: 5, tickfont:{size:16}, titlefont:{size:17}},
           yaxis: {title: 'Concentration (mol/L)', showgrid: false, tickmode: 'linear', ticks: 'outside', fixedrange: false, range: [0,2.1], tickfont:{size:16}, titlefont:{size:17}},
