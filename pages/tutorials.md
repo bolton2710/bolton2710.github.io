@@ -5,9 +5,9 @@ permalink: /tutorials
 ---
 <!-- Display ChE posts  -->
 <div class="tag-section">
-  <h2>Chemical Engineering Interactive Simulations</h2>
+  <h2>Reaction Engineering</h2>
   <div class="blog-posts">
-    {% assign tag_posts = site.posts | where: "tags", "che" %}
+    {% assign tag_posts = site.posts | where: "tags", "rxn" %}
     {% for post in tag_posts %}
       <div class="blog-post">
         <a href="{{ post.url }}">
@@ -26,11 +26,11 @@ permalink: /tutorials
   </div>
 </div>
 
-<!-- Display Other posts  -->
+<!-- Display FT posts  -->
 <div class="tag-section">
-  <h2>Random tutorials</h2>
+  <h2>Fourier Transform</h2>
   <div class="blog-posts">
-    {% assign tag_posts = site.posts | where: "tags", "other" %}
+    {% assign tag_posts = site.posts | where: "tags", "fourier" %}
     {% for post in tag_posts %}
       <div class="blog-post">
         <a href="{{ post.url }}">

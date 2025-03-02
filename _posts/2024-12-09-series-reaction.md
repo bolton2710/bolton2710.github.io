@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "Series Reaction in Batch Reactor"
+title: "1. Reaction in series"
 author: "Bolton Tran"
 categories: tutorials
-tags: [che]
+tags: [rxn]
 image: "/assets/img/che1.jpg"
 ---
-<h2>I. The problem</h2>
-
 Consider a gas-phase reaction in series:
 $$A \overset{k_1}{\rightarrow} B \overset{k_2}{\rightarrow} C$$
 taking place in an isothermal batch reactor,
@@ -60,7 +58,6 @@ between the transition state and the initial state.
 
 <div id="plotDiv" style="width: 100%; height: 500px; margin: 0px auto;"></div>
 
-<h2>II. The code</h2>
 Solving ODEs is a must-have skill
 for chemical engineers.
 While many ODE solver in different coding languages 
@@ -126,7 +123,6 @@ are then parsed back to Plotly
 written in JavaScript,
 which created the plot interactively.
 
-<h2>III. Credits</h2>
 This interactive exercise
 is heavily inspired by the 
 [LearnChemE](https://learncheme.com/simulations/kinetics-reactor-design/series-reactions-in-a-batch-reactor/) group

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Fourier transform -- 1. The basics"
+title: "1. The basics"
 author: "Bolton Tran"
 categories: tutorials
-tags: [other]
+tags: [fourier]
 image: "/assets/img/fourier1.png"
 ---
 Fourier transform is a common technique used in signal processing.
