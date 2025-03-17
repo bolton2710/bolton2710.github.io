@@ -26,8 +26,8 @@ We can use an approximate form of transition state theory (TST)
 to calculate $$k_1$$ and $$k_2$$:
 <div>
 \begin{align}
-k_1 &= \frac{RT}{h}\exp{\left(-\frac{E^\dagger_1}{RT}\right)}\\
-k_2 &= \frac{RT}{h}\exp{\left(-\frac{E^\dagger_2}{RT}\right)}
+k_1 &= \frac{k_BT}{h}\exp{\left(-\frac{E^\dagger_1}{k_BT}\right)}\\
+k_2 &= \frac{k_BT}{h}\exp{\left(-\frac{E^\dagger_2}{k_BT}\right)}
 \end{align}
 </div>
 The activation energies $$E^\dagger_1$$ and $$E^\dagger_2$$
@@ -44,18 +44,23 @@ Equivalent TST interpretation involves
 invoking the shift in a quasi-equilibrium
 between the transition state and the initial state.
 
-<span>$$T$$ (K):</span>
-<input type="range" id="Tslider" min="400" max="500" step="1" value="400">
-<span id="Tspan">400</span>
-
-<span>$$E^\dagger_1$$ (kJ/mol):</span>
-<input type="range" id="EA1slider" min="140" max="150" step="0.1" value="140">
-<span id="EA1span">140</span>
-
-<span>$$E^\dagger_2$$ (kJ/mol):</span>
-<input type="range" id="EA2slider" min="150" max="160" step="0.1" value="150">
-<span id="EA2span">150</span>
-
+<div style="display: flex; justify-content: space-between; width: 100%;">
+    <div style="width: 30%; text-align: left;">
+      <span>$T$ (K):</span>
+      <input type="range" id="Tslider" min="400" max="500" step="1" value="400" style="width: 80%;">
+      <span id="Tspan">400</span>
+    </div>
+    <div style="width: 30%; text-align: left;">
+      <span>$E^\dagger_1$ (kJ/mol):</span>
+      <input type="range" id="EA1slider" min="140" max="150" step="0.1" value="140" style="width: 80%;">
+      <span id="EA1span">140</span>
+    </div>
+    <div style="width: 30%; text-align: left;">
+      <span>$E^\dagger_2$ (kJ/mol):</span>
+      <input type="range" id="EA2slider" min="150" max="160" step="0.1" value="150" style="width: 80%;">
+      <span id="EA2span">150</span>
+    </div>
+</div>
 <div id="plotDiv" style="width: 100%; height: 500px; margin: 0px auto;"></div>
 
 Solving ODEs is a must-have skill
@@ -73,14 +78,14 @@ import numpy as np
 from scipy.integrate import odeint #module for ODE solver
 
 #Constants
-R=8.3144/1000 #kJ/mol.K
+kB=8.3144/1000 #kJ/mol.K
 h=4.135667696E-15*96.49/3600 #kJ/mol.h
 
 #Solve kinetic ODE at a given temperature and EAs
 def solveODE(EA1, EA2, T):
     #Rate constants
-    k1=(R*T/h)*np.exp(-EA1/R/T)
-    k2=(R*T/h)*np.exp(-EA2/R/T)  
+    k1=(kB*T/h)*np.exp(-EA1/kB/T)
+    k2=(kB*T/h)*np.exp(-EA2/kB/T)  
     #Define ODEs
     def dcdt(c,t):
         #c is array for concentrations
