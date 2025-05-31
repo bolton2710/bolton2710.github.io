@@ -232,7 +232,7 @@ and standard deviation $\delta U$.
 #Setpoint held constant at 1
 R=np.zeros(len(time))+1
 #Load fluctuation
-tstart=500 #time when load changes
+tstart=200 #time when load changes
 delU=10 #how much load change
 stdU=2 #how much new load fluctuate
 U=np.zeros(len(time))

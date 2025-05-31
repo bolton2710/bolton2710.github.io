@@ -7,9 +7,9 @@ tags: [rxn]
 image: "/assets/img/che1.jpg"
 ---
 Consider a gas-phase reaction in series:
-$$A \overset{k_1}{\rightarrow} B \overset{k_2}{\rightarrow} C$$
+$A \overset{k_1}{\rightarrow} B \overset{k_2}{\rightarrow} C$
 taking place in an isothermal batch reactor,
-we want to solve for the concentrations of $$A$$, $$B$$, and $$C$$
+we want to solve for the concentrations of $A$, $B$, and $C$
 versus time.
 
 We write the rate of change of concentration of each species with respect to time as follows:
@@ -21,17 +21,17 @@ We write the rate of change of concentration of each species with respect to tim
 \end{align}
 </div>
 We can solve the above ordinary differential equations (ODEs)
-once values for rate constants $$k_1$$ and $$k_2$$ are known.
+once values for rate constants $k_1$ and $k_2$ are known.
 We can use an approximate form of transition state theory (TST)
-to calculate $$k_1$$ and $$k_2$$:
+to calculate $k_1$ and $k_2$:
 <div>
 \begin{align}
 k_1 &= \frac{k_BT}{h}\exp{\left(-\frac{E^\dagger_1}{k_BT}\right)}\\
 k_2 &= \frac{k_BT}{h}\exp{\left(-\frac{E^\dagger_2}{k_BT}\right)}
 \end{align}
 </div>
-The activation energies $$E^\dagger_1$$ and $$E^\dagger_2$$
-and the temperature $$T$$ control reaction rates.
+The activation energies $E^\dagger_1$ and $E^\dagger_2$
+and the temperature $T$ control reaction rates.
 From a simple collision theory perspective,
 larger activation energies slow reaction down
 since the probability of particles' collision
@@ -120,7 +120,7 @@ on https://www.pythonanywhere.com/.
 The script contains python functions
 that perform mathematical operations.
 The sliders send values of
-($$E^\dagger_1$$, $$E^\dagger_2$$, $$T$$) to the PythonAnywhere app,
+($E^\dagger_1$, $E^\dagger_2$, $T$) to the PythonAnywhere app,
 which performs the above Scipy-ODE solver
 and outputs results as json arrays.
 The json arrays
@@ -135,7 +135,7 @@ at the University of Colorado Boulder.
 Check out their library for other cool interaction simulations
 for chemical engineering students.
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 <script>
   const plotDiv = document.getElementById('plotDiv');
   const Tslider = document.getElementById('Tslider');

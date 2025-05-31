@@ -42,24 +42,24 @@ B_{(g)} + \ast \text{ } &\overset{k^f_2}{\underset{k^r_2}{\longleftrightarrow{}}
 </div>
 
 This set of chemical equations represents
-a bimolecular reaction between $$A$$ and $$B$$
+a bimolecular reaction between $A$ and $B$
 taking place on a catalyst surface.
-The catalyst active site is denoted as $$\ast$$,
-where gaseous $$A_{(g)}$$ and $$B_{(g)}$$ molecules
+The catalyst active site is denoted as $\ast$,
+where gaseous $A_{(g)}$ and $B_{(g)}$ molecules
 can adsorb/desorb to and from (first two equations).
-Adsorbed $$\ast A$$ and $$\ast B$$ react
-to form $$\ast C$$ adsorbed on one site 
+Adsorbed $\ast A$ and $\ast B$ react
+to form $\ast C$ adsorbed on one site 
 and freeing up one site (third equation).
 Finally,
-$$C_{(g)}$$ desorbs from the surface (last equation)
+$C_{(g)}$ desorbs from the surface (last equation)
 as the product of this catalytic cycle.
 
 For simplicity,
 we assume that
-the partial pressure (i.e., concentration) of $$A_{(g)}$$ and $$B_{(g)}$$
+the partial pressure (i.e., concentration) of $A_{(g)}$ and $B_{(g)}$
 is time invariant,
-and that the partial pressure of $$C_{(g)}$$ is negligible
-(i.e., no re-adsorption of desorbed $$C$$).
+and that the partial pressure of $C_{(g)}$ is negligible
+(i.e., no re-adsorption of desorbed $C$).
 But in principle,
 the partial pressures of gaseous species
 can be solved with respect to time as well.
@@ -76,11 +76,11 @@ for the rate of change in concentration of each **surface** species:
 \end{align}
 </div>
 Here,
-$$\theta$$ represents the fractional coverage of
-chemical species $$A$$, $$B$$, $$C$$,
-and vacant site $$v$$ on the surface.
+$\theta$ represents the fractional coverage of
+chemical species $A$, $B$, $C$,
+and vacant site $v$ on the surface.
 That is,
-$$\theta_v + \theta_A + \theta_B + \theta_C = 1$$ at all time.
+$\theta_v + \theta_A + \theta_B + \theta_C = 1$ at all time.
 The ODEs already ensure the detailed balance of surface species,
 we just need to set the initial coverage sum to 1 
 when solving for the equations.
@@ -101,8 +101,8 @@ is related to a loss in transtional entropy
 of a gaseous molecule with 3D motion
 to an adsorbed molecule with 1D motion (and no enthalpic component).
 For simplicity,
-let's assume a mass of $$m=10$$ amu (a Neon atom)
-and an area of $$A=4$$ Å<sup>2</sup> for each active site.
+let's assume a mass of $m=10$ amu (a Neon atom)
+and an area of $A=4$ Å<sup>2</sup> for each active site.
 The rate constants for desorption and reaction 
 are purely enthalpic loss
 and follow the transition state theory.
@@ -241,7 +241,7 @@ that assume all time-derivatives equal to zero.
 As seen below,
 the nonlinear equations
 need to have an explicit site balance for
-$$\theta_v + \theta_A + \theta_B + \theta_C = 1$$.
+$\theta_v + \theta_A + \theta_B + \theta_C = 1$.
 Otherwise,
 it is set up with the exact same equations.
 ```python
@@ -401,7 +401,7 @@ Solving for these reactor types
 may become a subject of a future post :).
 
 <!-- Plotly script -->
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 <script>
   // Initialize plot
   function Plotly1(T, PA, PB) 
@@ -418,7 +418,7 @@ may become a subject of a future post :).
                           {x: time, y: thetas[3], mode: 'lines', hoverinfo: 'x+y', name: "$\\theta_C$", line: { color: 'green' }, xaxis: 'x1', yaxis: 'y2', showlegend: true}]
         const layout = {
             xaxis: { title: "Log time (s)", type: "log" , showgrid: false, tickmode: 'linear', ticks: 'outside', tickangle:0, dtick: 3, tickfont:{size:16}, titlefont:{size:17}},
-            yaxis: { title: "$\\theta_v \\;/\\; \\theta_A \\;/\\; \\theta_B$",  range: [0, Math.max(...thetas[1].map(Number), ...thetas[2].map(Number)) * 1.1], 
+            yaxis: { title: "$\\theta_v , \\theta_A , \\theta_B$",  range: [0, Math.max(...thetas[1].map(Number), ...thetas[2].map(Number)) * 1.1], 
                     showline: true, showgrid: false, ticks: 'outside', tickfont:{size:16}, titlefont:{size:17}, automargin: true },
             yaxis2: { title: "$\\theta_C$", range: [0, Math.max(...thetas[3].map(Number)) * 1.1], 
                     showline: true, showgrid: false, ticks: 'outside', tickfont:{size:16}, titlefont:{size:17}, overlaying: 'y', side: 'right', automargin: true },
@@ -444,9 +444,9 @@ may become a subject of a future post :).
         const layout = {
             grid: { rows: 2, columns: 1, pattern: 'independent' },
             xaxis: { title: "Temperature (K)", showgrid: false, tickmode: 'linear', ticks: 'outside', tickangle:0, dtick: 50, tickfont:{size:16}, titlefont:{size:17}},
-            yaxis: { title: "$\\text{Steady state}\\;\\;\\theta_v/\\theta_A/\\theta_B$",  range: [0, Math.max(...thetas[1].map(Number), ...thetas[2].map(Number)) * 1.1], 
+            yaxis: { title: "$\\theta_v, \\theta_A, \\theta_B$",  range: [0, Math.max(...thetas[1].map(Number), ...thetas[2].map(Number)) * 1.1], 
             showline: true, showgrid: false, ticks: 'outside', tickfont:{size:16}, titlefont:{size:17}, automargin: true },
-            yaxis2: { title: "$\\text{Steady state}\\;\\;\\theta_C$", range: [0, Math.max(...thetas[3].map(Number)) * 1.1], 
+            yaxis2: { title: "$\\theta_C$", range: [0, Math.max(...thetas[3].map(Number)) * 1.1], 
             showline: true, showgrid: false, ticks: 'outside', tickfont:{size:16}, titlefont:{size:17}, overlaying: 'y', side: 'right', automargin: true },
             xaxis2: { title: "Temperature (K)", domain: [0, 1], anchor: 'y3', showgrid: false, tickmode: 'linear', ticks: 'outside', tickangle: 0, dtick: 50, tickfont: {size:16}, titlefont:{size:17}},
             yaxis3: { title: "TOF (s<sup>-1</sup>)", range: [0, Math.max(...rates) * 1.1], showline: true, showgrid: false, ticks: 'outside', tickfont: {size:16}, titlefont:{size:17}, domain: [0, 0.4], automargin: true },
