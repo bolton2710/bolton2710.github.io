@@ -124,8 +124,8 @@ are set up similarly as in
 (see below).
 The time variable
 is set up in a logarithmic scale,
-spanning from picoseconds ($10^{-12}$ s)
-to minutes ($10^2$ s).
+spanning from picosecond ($10^{-12}$ s)
+to second ($1$ s).
 
 ```python
 import numpy as np

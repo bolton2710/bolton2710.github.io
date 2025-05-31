@@ -12,3 +12,18 @@ layout: default
     {{ content }}
   </article>
 </div>
+<script type="text/javascript">
+  MathJax = {
+    tex: {
+      tags: 'ams', // Enable AMS-style equation numbering
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tagSide: 'right',       // Show equation numbers on the right
+      tagIndent: '0em',       // Indent for numbered equations
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
