@@ -320,6 +320,96 @@ This is because there is an explicit penalty in the optimization loop that preve
 
 The tunable controller parameters for DMC include the $\lambda$ weight for penalizing large $\Delta u$,
 as well as the length of prediction horizon $N$.
-I will soon add interactive simulation for exploring how these parameters affect the control system.
+<div style="display: flex; justify-content: space-between; width: 100%;">
+    <div style="width: 30%; display: flex; flex-direction: row; align-items: center;">
+        <span>Horizon time</span>
+        <input type="range" id="ntslider" min="1" max="10" step="1" value="5" style="width: 50%;">
+        <span id="ntspan">5</span>
+    </div>
+    <div style="width: 30%; display: flex; flex-direction: row; align-items: center;">
+        <span>$\Delta u$ weight</span>
+        <input type="range" id="lamduslider" min="1" max="20" step="1" value="1" style="width: 50%;">
+        <span id="lamduspan">1</span>
+    </div>
+    <div style="width: 15%; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+      <button id="computeBtn" style="padding: 10px 20px; font-size: 16px;">Compute</button>
+    </div>
+    <div style="width: 25%; display: flex; flex-direction: row; align-items: center; justify-content: center; font-size: 16px; color: #555; white-space: pre-line;">
+      <span id="statusText"></span>
+      <div id="spinner" style="display:inline-block; width:20px; height:20px; border:2px solid #ccc; border-top:2px solid #333; border-radius:50%; animation: spin 1s linear infinite; margin-left: 10px;"></div>
+    </div>
+</div>
+<style>
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+</style>
+<div id="plotDiv" style="width: 100%; height: 500px; margin: 0px auto;"></div>
 
-**.To be continued.**
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<script>
+  const plotDiv = document.getElementById('plotDiv');
+  const ntslider = document.getElementById('ntslider');
+  const lamduslider = document.getElementById('lamduslider');
+  const ntspan = document.getElementById('ntspan');
+  const lamduspan = document.getElementById('lamduspan');
+  const computeBtn = document.getElementById('computeBtn');
+  const statusText = document.getElementById('statusText');
+  const spinner = document.getElementById('spinner');
+  statusText.textContent = "Computing...";
+  spinner.style.display = "inline-block";
+  //Plot R step
+  function plot(Nt, lamdu) 
+  {
+    const url = `https://bolton2710.pythonanywhere.com/dmc?Nt=${Nt}&lamdu=${lamdu}`;
+    const startTime = performance.now();
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const t = data.t.map(Number);
+        const r = data.r.map(Number);
+        const pv = data.pv.map(Number);
+        const mv = data.mv.map(Number);
+        const plotData = [
+          {x: t, y: pv, type: 'scatter', line:{color:'blue'}, name:'$y$', hoverinfo: 'x+y', xaxis: 'x1', yaxis: 'y1'},
+          {x: t, y: r , type: 'scatter', line:{color:'black', dash:'dash'}, name:'$R$', hoverinfo: 'x+y', xaxis: 'x1', yaxis: 'y1'},
+          {x: t, y: mv, type: 'scatter', line:{color:'green'}, name:'$u$', hoverinfo: 'x+y', xaxis: 'x1', yaxis: 'y1'}
+          ];
+        const layout = {
+          xaxis: {title: "Time", fixedrange: true, showgrid: false, range: [0,200], tickfont:{size:16}, titlefont:{size:17}, ticks: 'outside', showline: true},
+          yaxis: {fixedrange: false, zeroline: false, showgrid: false, tickfont:{size:16}, ticks: 'outside'},
+          legend: {x: 0.5, y: 1.05, xanchor: 'center', yanchor: 'bottom', orientation: 'h', font: {size:16}},
+          annotations: [{xref: 'paper', yref: 'paper', x: 0.5, y: 1,
+              text: 'Horizon: ' + Nt + '<br>Δu weight: ' + lamdu,
+              showarrow: false, font: {size: 16}}]
+        };
+        Plotly.newPlot(plotDiv, plotData, layout);
+        const elapsedTime = (performance.now() - startTime) / 1000;  // in seconds
+        const elapsedString = elapsedTime.toFixed(2) + " s";
+        statusText.textContent = `Horizon: ${Nt}\nΔu weight: ${lamdu}\nDone in ${elapsedString}`;
+        spinner.style.display = "none";
+      })
+      .catch(err => {
+      console.error("Error fetching data:", err);
+      statusText.textContent = "Error.";
+      spinner.style.display = "none";});
+  }
+  // Update displayed slider values (but don’t call plot yet)
+  ntslider.addEventListener('input', () => {
+    ntspan.textContent = ntslider.value;
+  });
+  lamduslider.addEventListener('input', () => {
+    lamduspan.textContent = lamduslider.value;
+  });
+  // Compute button triggers plot
+  computeBtn.addEventListener('click', () => {
+    const Nt = parseInt(ntslider.value);
+    const lamdu = parseInt(lamduslider.value);
+    statusText.textContent = "Computing...";
+    spinner.style.display = "inline-block";
+    plot(Nt, lamdu);
+  });
+  // Optional: plot default on load
+  plot(parseInt(ntslider.value), parseInt(lamduslider.value));
+  </script>
