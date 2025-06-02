@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "1. PID controller basics"
+title: "1. PID controller"
 author: "Bolton Tran"
 categories: tutorials
 tags: [control]
-image: "/assets/img/pid1.png"
+image: "/assets/img/pid.png"
 ---
 <h2>
 PID controller
@@ -116,7 +116,7 @@ Kd=1 #derivative gain
 ##-----Time setup-----
 tmax=200
 dt=0.1
-time=np.arange(0, tmax,dt)
+time=np.arange(0, tmax+dt, dt)
 ##-----Initial condition-----
 C0=0 #intial process variable
 M0=C0 #same manipulated variable as offset
