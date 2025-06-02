@@ -210,7 +210,7 @@ and set it to zero (note that this is a derivative taken with respect to a matri
 \end{align}
 </div>
 The math (especially with matrices) may seem daunting, but do not be discouraged to work these out on papers
-(it took me almost two days to work these out myself).
+(it took me a few hours to work these out myself).
 
 As you'll see,
 practically solving this minimization through Eqn. 10 is not so bad despite having many matrices.
@@ -221,7 +221,7 @@ $\mathbf{y_{ref}}$ comes from the setpoint function $R$.
 $y_k$ is a scalar obtained from measurement in the "real-life" plant.
 
 Finally, after solving Eqn. 10 to get the optimal $\mathbf{\Delta \hat u_k}$,
-we only extract the very entry of that vector to use as the next controller output $u(t=k+1)$,
+we only extract the very first entry of that vector to use as the next controller output $u(t=k+1)$,
 which then propagate the process variable $y$ through $G_p$.
 
 <h2>
@@ -233,7 +233,7 @@ I tried to annotate/comment as much as I can.
 The best way to understand everything yourself is
 to work out the math on papers,
 in parallel with looking through the code
-and examining what each matrices/vectors look like.
+and examining what each matrix/vector look like.
 
 ```python
 import numpy as np
@@ -319,7 +319,7 @@ and the plant model predicts how the system should react.
 This is because there is an explicit penalty in the optimization loop that prevent any large jump in $u$.
 
 The tunable controller parameters for DMC include the $\lambda$ weight for penalizing large $\Delta u$,
-as well as the length of prediction horizon $N$.
+as well as the length of prediction horizon $N$. 
 <div style="display: flex; justify-content: space-between; width: 100%;">
     <div style="width: 30%; display: flex; flex-direction: row; align-items: center;">
         <span>Horizon time</span>
