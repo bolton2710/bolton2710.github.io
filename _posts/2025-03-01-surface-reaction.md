@@ -328,7 +328,7 @@ for T in temps:
     k3r=krxn(T, 60)
     k4f=kdes(T, 40)
     #solve non-linear steady state eqns
-    thetas=fsolve(eqns, theta0)
+    thetas=fsolve(stst, theta0)
     #Save thetas
     thetaTs.append(thetas)
     #Save rate of C desorption
