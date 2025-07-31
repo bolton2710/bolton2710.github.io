@@ -11,8 +11,8 @@ menu:
 - {name: 'Mentoring',  url: 'mentor'}
 - {name: 'Tutorials',  url: 'tutorials'}
 social:
+- {icon: 'github', link: 'https://github.com/bolton2710'}
 - {icon: 'google', link: 'https://scholar.google.com/citations?user=3IqbycgAAAAJ&hl=en&oi=ao'}
-- {icon: 'twitter', link: 'https://x.com/BoltonTran27'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/bolton-h-tran/'}
 
 sharing_button_prompt: 'Feel free to share!'

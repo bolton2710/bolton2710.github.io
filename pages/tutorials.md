@@ -50,7 +50,7 @@ permalink: /tutorials
 </div>
 
 <!-- Display FT posts  -->
-<div class="tag-section">
+<!-- <div class="tag-section">
   <h2>Fourier Transform</h2>
   <div class="blog-posts">
     {% assign tag_posts = site.posts | where: "tags", "fourier" %}
@@ -70,4 +70,4 @@ permalink: /tutorials
       </div>
     {% endfor %}
   </div>
-</div>
+</div> -->
