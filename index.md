@@ -2,15 +2,20 @@
 layout: home
 title: Home
 ---
-<p style="float: right; margin: 5px 0 10px 10px;">
+<p style="float: right; margin: 20px 0 20px 0px;">
     <img src="/assets/img/self-cropped.png" width="280" alt="Me and Biscuit photo" style="border-radius: 0px;">
 </p>
 <p>
-Welcome! My name is Bolton.
-I am a postdoctoral fellow
+Welcome! 
+My name is Bolton.
+I'm working as a thermodynamicist at the Chemours company.
+
+<br><br>
+I was a postdoctoral fellow
 working with
 <a href="https://cheresearch.engin.umich.edu/goldsmith/" target="_blank">Dr. Bryan Goldsmith</a>
-at the University of Michigan.
+at the University of Michigan in 2023-2025.
+Prior to that, 
 I obtained my Ph.D. in Chemical Engineering
 at Pennsylvania State University
 working with 
@@ -18,7 +23,7 @@ working with
 and
 <a href="https://www.che.psu.edu/department/directory-detail-g.aspx?q=STM9" target="_blank">Dr. Scott Milner</a>.
 <br>
-My research involves
+My research involved
 developing molecular models
 to study and understand electrochemistry and catalysis
 with broad applications

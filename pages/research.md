@@ -53,8 +53,8 @@ permalink: /research
     <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.4c01032" target="_blank">
     J. Phys. Chem. Lett. 2024, 15, 6538−6543</a> 
     <br>
-    <a href="https://doi.org/10.26434/chemrxiv-2025-pvlzg-v2" target="_blank">
-    ChemRxiv 2025</a> 
+    <a href="https://doi.org/10.1039/D5SC03757C" target="_blank">
+    Chem. Sci., 2025, 16, 17325-17333</a> 
     </p>
   </div>
 </div>
